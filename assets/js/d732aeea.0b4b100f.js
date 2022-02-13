@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktechharvesting=self.webpackChunktechharvesting||[]).push([[322],{1600:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/nextjs","name":"nextjs","count":2,"permalink":"/blog/tags/nextjs"}')}}]);
