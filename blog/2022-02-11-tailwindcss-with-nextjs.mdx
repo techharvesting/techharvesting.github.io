@@ -1,0 +1,72 @@
+---
+title: Setup tailwindcss with nextjs
+slug: nextjs-tailwindcss
+authors: [naseelniyas]
+tags: [nextjs, tailwindcss]
+---
+<!--truncate-->
+
+
+## Setup Tailwind CSS with Next.js
+
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1632979765809/HTEigfQR-.png)
+
+> Tailwind css is Super Awesome. It is my favorite CSS Framework.
+> This post is all about setting it up with Next.js (My Favorite JavaScript framework)
+
+# The Shorter way
+
+If you have not yet created a next.js project, then use this command to set it up with tailwind preconfigured for you!
+
+```bash
+npx create-next-app -e with-tailwindcss next-tailwind
+```
+
+Then Change your directory:
+
+```bash
+cd next-tailwind
+```
+
+And start the server:
+
+```bash npm2yarn
+npm run dev
+```
+
+# The Second Approach
+
+If you have already got a project, it still is simple!
+
+First install a _few_ dependencies:
+
+```bash npm2yarn
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+```
+
+This should install tailwind, postcss and autoprefixer
+
+Next, Get generate your configuration for Tailwind and Postcss.
+
+```bash
+npx tailwindcss init -p
+```
+
+Then, import it in your `pages/_app.js` file
+
+```jsx
+import 'tailwindcss/tailwind.css';
+```
+
+Finally, Run your server
+
+```bash npm2yarn
+npm run dev
+```
+
+That was all you needed to do to have tailwind in your project. If you apply a class now, it will reflect on the webpage.
+
+### Links
+
+[Tailwind CSS](https://tailwindcss.com/)
+[Next.js](https://nextjs.org/)

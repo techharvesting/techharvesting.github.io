@@ -1,0 +1,137 @@
+---
+title: The best Nextjs Workflow
+slug: nextjs-workflow
+authors: [naseelniyas]
+tags: [nextjs, typescript, react]
+---
+<!--truncate-->
+
+
+## The best next.js workflow with Typescript, sass and more!
+
+
+ Do you use Next.js? then make sure you use these tools to boost your productivity and development experience!
+
+## Typescript
+
+![ts.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1631503196236/-nmurDa0s.png)
+
+> Typescript is a very popular and good choice for using with Next.js or any other framework ! It is going to reduce the amount of errors we get by introducing a type system with JavaScript
+
+To Create a Next.js project with **typescript** , run:
+```bash
+npx create-next-app next-typescript-app --ts
+```
+
+This will create a next.js project with typescript support and also a `tsconfig.json` file (the **typescript configuration** file)
+
+## Sass
+![sass.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1631503254762/Tvmhj-xYd.png)
+
+> **Sass** is an awesome superset for css which supports a lot of features like nesting , `if` conditions and more. You can learn more about sass [here](https://sass-lang.com/documentation) 
+
+It is very simple to add `sass` to your project if you use next.js. Just add sass with
+```bash npm2yarn
+npm install sass
+```
+
+Then rename your `.css` files with `.scss` or `.sass` extensions. If you use the `.sass` extension, when you will have to **remove** the curly braces and the semicolons. Or you can use the `.scss` extension. You can also rename the css module files with the `.sass` or the `.scss` extension
+
+## Prettier
+
+![prettier.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1631504232931/aSwstYs-C.png)
+
+> Does your code not get formatted the way you want? use Prettier! prettier is a code formatter which is also very popular you can learn more about prettier  [here](https://prettier.io/) 
+
+To add prettier to your project, run:
+```bash npm2yarn
+npm install prettier -D
+```
+
+I also create a npm script in my `package.json` to format my code. ( I named it *clean*)
+
+```json
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "prettier --write ."
+  }
+```
+So now when you run `npm run clean` of `yarn clean` you will see that your code gets clean. I also create a `.prettierrc` file in the root of my project and give the following in it:
+
+```json
+{
+  "singleQuote": true
+}
+```
+But if you look carefully, then you will find you that it also format the files in our `.next` folder created by next.js, so to *ignore* the files in the `.next` folder, create a `.prettierignore` file at the root of your project with the following contents
+```sh
+# next.js dev server files
+.next/
+# npm packages
+node_modules/
+```
+
+## Using husky to format code
+<center>
+ <h1><font size='100'>🐶</font></h1>
+</center>
+
+I did not find a logo for husky 🤷‍♂️
+
+> If you use git, this will be super useful! you can create a git hook, which will format our code before each commit.
+
+Since we have prettier already installed, run:
+```sh
+npx mrm@2 lint-staged
+```
+We are also using husky in here. so it will create a `.husky` folder
+
+And in our `package.json`, in the `lint-staged` section, change to the following if using typescript
+```json
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{tsx,.ts,css,md}": "prettier --write"
+  }
+```
+
+Now, I did a quick commit with
+```bash
+git commit -m '🦋 Formatting with Prettier'
+```
+and.....   Our code is pretty as we specified in our `.prettierrc` file
+
+## Testing 🧪
+
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1631506691302/XW4sUx0Pw.png)
+> If you want to test your next.js application, use `cypress` as shown in the next.js  [docs](https://nextjs.org/docs/testing) 
+
+Install cypress by running:
+```bash npm2yarn
+npm install -D cypress
+```
+
+:::tip
+
+Cypress is used for **end to end testing** of your next.js application.
+
+:::
+
+Create a cypress script
+```json
+"test": "cypress open"
+```
+
+Run cypress with
+```bash npm2yarn
+npm run test
+```
+
+You can create your tests now ( I am not showing anything now). You can learn more  [here](https://nextjs.org/docs/testing) 
+
+That was it! You can of course add on to this list...
+**Thanks for reading** 😁
+
+# 👋👋

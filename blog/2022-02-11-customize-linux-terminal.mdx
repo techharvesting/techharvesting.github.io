@@ -1,0 +1,83 @@
+---
+title: Customize you Linux/Unix terminal!
+slug: customize-linux-unix-terminal
+authors: [naseelniyas]
+tags: [terminal,  linux]
+---
+<!--truncate-->
+
+## Customize your Terminal in Linux/Macos/WSL without ohmyzsh!
+
+# Lets make that ugly terminal look better! 🐚
+(I am Doing this on a Raspberrypi, but this can be done on Any Linux Distro, MacOS or Windows Subsystem for Linux if you are on windows)
+
+<!--truncate-->
+### Before:
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1627456831336/OqBwd6Bby.png)
+
+### After: 
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1627456846734/pF83r0fmr.png)
+
+
+If you have watched any other tutorials/posts like this, you know, that we use a package called `ohmyzsh`, but that slows down the shell a bit, so we will do it without `ohmyzsh`! Just normal `zsh`! (We will use a theme called `powerlevel10k`)
+
+
+## Step 1: Install `zsh`
+Now, most of Linux distributions come Pre Installed with `bash`, which is a shell, but we will use `zsh` in this tutorial <br /> <br />
+So to install zsh on `Ubuntu/Debian/Raspbian/Mint/Pop/Any debian based distro` run: 
+```bash
+sudo apt update
+sudo apt install zsh
+```
+Next run `zsh` on the command line to test if the installation worked
+If it did, you are ready for the next step 🎊
+ else *troubleshoot* the install 😕
+
+## Step 2: Changing the default shell
+Open up a new terminal and Bash will popup...
+Let us make `zsh` the default 😎
+
+To Change the default shell, run: 
+```bash
+chsh
+```
+and when prompted, enter `/bin/zsh` as the shell
+
+Now, open a new session, and boom there is `zsh`... still ugly though
+
+## Step 3: Style it up 🤩
+### Let us now install our theme `powerlevel10k`
+
+First you can install a recomended font... mostly a `nerd font` (Link to repo below) I use a font called `VictorMono NF` (also linked below)
+
+Run: 
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+This installs `powerlevel10k`, When you open up a new session, you get a config wizard: 
+
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1627459246091/JU7CQPh7b.png)
+
+Answer the question to your liking and then use your new **better** terminal!
+
+**And we did not use Ohmyzsh**
+
+So how did you do it?
+Do share your new shell look in the comments below! 
+
+Also **👍** this post if you found this *helpful*
+
+
+## If you really want to use  `oh-my-zsh`, then watch my video on doing so!
+<iframe src="http://youtube.com/embed/ZDghjjwhzVs" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+
+
+# Links in this post 🌐
+[My `~/.p10k.zsh` file copy&paste if you want the same thing 😄](https://gist.github.com/NaseelNiyas/505dba153890058f7e268ae4b9f8a71e)
+
+ [Powerlevel10k repo](https://github.com/romkatv/powerlevel10k) 
+
+ [Nerd Fonts Repo](https://github.com/ryanoasis/nerd-fonts) 
+
+[Victor Mono NF](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/VictorMono)

@@ -1,0 +1,50 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+:root {
+  --ifm-color-primary: #598fc1;
+  --ifm-color-primary-dark: #232739;
+  --ifm-color-primary-darker: #11183c;
+  --ifm-color-primary-darkest: #06041c;
+  --ifm-color-primary-light: #84d2da;
+  --ifm-color-primary-lighter: #86e0e6;
+  --ifm-color-primary-lightest: #b3e7f7;
+  --ifm-code-font-size: 95%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+html[data-theme='dark'] {
+  --ifm-color-primary: #7bbcce;
+  --ifm-color-primary-dark: #232739;
+  --ifm-color-primary-darker: #11183c;
+  --ifm-color-primary-darkest: #06041c;
+  --ifm-color-primary-light: #84d2da;
+  --ifm-color-primary-lighter: #86e0e6;
+  --ifm-color-primary-lightest: #b3e7f7;
+  --ifm-code-font-size: 95%;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.h-red:hover {
+  color: #ce3934 !important;
+}
+.h-white:hover {
+  color: #e1e1e1 !important;
+}
+
+.h-blue:hover {
+  color: #1da1f2 !important;
+}
