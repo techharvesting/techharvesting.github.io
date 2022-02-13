@@ -3,6 +3,6 @@ id: react-intro
 title: React
 ---
 
-http://reactjs.org
+https://reactjs.org
 
 <img src='/img/logos/react.png' />
