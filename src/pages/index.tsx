@@ -74,7 +74,7 @@ export default function Home(): JSX.Element {
                     </a>
                   </h3>
                   <p className='card__description'>
-                    Subscribe to TechHarvesting YouTube channel to get tutorials
+                    Subscribe to the TechHarvesting YouTube channel to get tutorials
                     on different technologies
                   </p>
                 </div>
